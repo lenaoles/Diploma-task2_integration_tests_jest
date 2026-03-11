@@ -16,3 +16,6 @@ if (!envAccessKey) {
 
 export const masterKey: string = envMasterKey;
 export const accessKey: string = envAccessKey;
+
+// export const masterKey = process.env.JSONBIN_MASTER_KEY!;
+// export const accessKey = process.env.JSONBIN_ACCESS_KEY!;

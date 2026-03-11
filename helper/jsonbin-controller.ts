@@ -1,8 +1,8 @@
 import { accessKey, masterKey } from './constants';
 
 export class JsonBinController {
-    private readonly jsonBinUrl: string; //why readonly ?
-    private readonly defaultHeaders: Record<string, string>; //what is it ?
+    private readonly jsonBinUrl: string;
+    private readonly defaultHeaders: Record<string, string>;
 
     constructor(baseUrl: string) {
         this.jsonBinUrl = `${baseUrl}/b`;

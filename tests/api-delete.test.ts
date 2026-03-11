@@ -22,12 +22,7 @@ describe('JSONBin API - Delete Bin', () => {
         const deleteBody = await deleteResponse.json()
         expect(deleteResponse.status).toBe(200);
         expect(deleteBody.metadata.id).toEqual(binId);
-        expect(deleteBody.message).toBe("Bin deleted successfully")
-    })
-
-    test('positive: deleted bin cannot be read anymore', async () => {
-        const deleteResponse = await controller.deleteBin(binId)
-        expect(deleteResponse.status).toBe(200);
+        expect(deleteBody.message).toBe("Bin deleted successfully");
 
         const getResponse = await controller.getBin(binId, true);
         const getBody = await getResponse.json();
